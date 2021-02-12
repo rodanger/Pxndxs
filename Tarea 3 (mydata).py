@@ -13,7 +13,7 @@ print ('************************************************************************
 # Creando un DataFrame
 
 d = pd.DataFrame ({'Nombre': ['Andrea Castro' , 'Carlos de la rosa' ] ,
- 'Ocupacion': ['Ing. Quimico' , 'Pedriatra'] , 'Nacimiento': ['1971-08-23' , '1983-03-13'] ,
+ 'Ocupacion': ['Ing. Quimico' , 'Astronomo'] , 'Nacimiento': ['1971-08-23' , '1983-03-13'] ,
  'Muerte' : ['2014-02-23' , '2019-05-24'] , 'Edad' : [43, 36]})
 print (d)
 
@@ -28,7 +28,7 @@ print ('************************************************************************
 
 
 cientificos = pd.DataFrame( 
-    data = {'Ocupacion': ['Ing. Quimico' , 'Pedriatra'] ,
+    data = {'Ocupacion': ['Ing. Quimico' , 'Astronomo'] ,
      'Nacimiento': ['1971-08-23' , '1983-03-13'] ,
      'Muerte': ['2014-02-23' , '2019-05-24'] ,
       'Edad' : [43, 36]} ,
