@@ -15,7 +15,7 @@ print ('************************************************************************
 # Creando un DataFrame
 
 cientificos = pd.DataFrame( 
-    data = {'Ocupacion': ['Ing. Quimico' , 'Astronomo', 'Bioquimicos' , 'Biofisico'] ,
+    data = {'Ocupacion': ['Ing. Quimico' , 'Astronomo', 'Bioquimico' , 'Biofisico'] ,
      'Nacimiento': ['1971-08-23' , '1983-03-13' , '1975-04-11' , '1988-04-27'] ,
      'Muerte': ['2014-02-23' , '2019-05-24' , '2010-08-29' , '2017-10-17'] ,
       'Edad' : [43, 36, 35, 29 ]} ,
@@ -107,8 +107,8 @@ print(cientificos[cientificos['Edad'] > cientificos['Edad'].mean()])
 print ('*********************************************************************************') 
 
 
-# 4 values passed as bool vector
-# 3 rows returned 
+# 4 valores pasados como vector bool
+# 3 filas devueltas 
 
 print (cientificos.loc[[True, True, False, True]])
 
