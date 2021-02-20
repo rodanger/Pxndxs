@@ -1,5 +1,6 @@
-import pandas as pd, matplotlib.pyplot as plt, numpy as np #Importamos las librerias
+import pandas as pd, matplotlib.pyplot as plt, numpy as np #Importamos la libreria
 
+ 
 kombat = pd.read_csv('kombat1.csv')
 
 
@@ -31,9 +32,12 @@ print(flat.head(15))
 print('********************************************')
 
 
+print()
+
 ### Frecuencia de conteo agrupada
 
 # Usar el nunique (unico numero)
+
 print(kombat.groupby('Defensa')['Ataque'].nunique())
 
 ### Trama Basica (Basic Plot)
