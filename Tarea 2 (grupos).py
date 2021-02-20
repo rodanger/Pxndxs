@@ -1,6 +1,5 @@
-import pandas as pd #Importamos la libreria
-import matplotlib.pyplot as plt, numpy as np
- 
+import pandas as pd, matplotlib.pyplot as plt, numpy as np #Importamos las librerias
+
 kombat = pd.read_csv('kombat1.csv')
 
 
