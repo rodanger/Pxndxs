@@ -3,14 +3,16 @@
 import pandas as pd
 
 # Declaramos la variable indicandole que vea el archivo
+
 print("***************************")
 kombat= pd.read_csv('kombat1.csv')
 
-# Imprimimos el archivo
 print (kombat.head(29))
+
 print()
 
-#Con esto podemos visualizar los nombres de las columnas Del Dataframe
+# Con esto podemos visualizar los nombres de las columnas Del Dataframe
+
 print("***************************")
 print(kombat.columns)
 
