@@ -9,9 +9,13 @@ print ('*******************************************')
 ### Desplegando medio de grupos 
 
 grouped_kombat = kombat.groupby('Defensa') # Introducimos la funcion en una nueva variable
+
 print(kombat.groupby('Defensa')['Ataque'].mean()) # obtenemos la columna 'Ataque' y calculamos la media
 
+print ()
+
 print('********************************************')
+
 print(type(grouped_kombat))
 
 print(grouped_kombat)
@@ -30,7 +34,6 @@ print('********************************************')
 
 ### Frecuencia de conteo agrupada
 
-
 # Usar el nunique (unico numero)
 print(kombat.groupby('Defensa')['Ataque'].nunique())
 
@@ -41,3 +44,5 @@ var_g = kombat.groupby('Ataque')['Defensa'].mean()
 print(var_g)
 
 var_g.plot()
+
+plt.show()
