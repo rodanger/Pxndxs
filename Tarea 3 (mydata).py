@@ -27,7 +27,7 @@ print ('************************************************************************
 print ('*********************************************************************************')
 
 
-cientificos = pd.DataFrame( 
+c = pd.DataFrame( 
     data = {'Ocupacion': ['Ing. Quimico' , 'Astronomo'] ,
      'Nacimiento': ['1971-08-23' , '1983-03-13'] ,
      'Muerte': ['2014-02-23' , '2019-05-24'] ,
@@ -35,13 +35,13 @@ cientificos = pd.DataFrame(
        index =  ['Andrea Castro' , 'Carlos de la rosa' ] ,
      columns = ['Ocupacion' , 'Nacimiento' , 'Muerte' , 'Edad'])
 
-print (cientificos) 
+print (c) 
 
 print ('*********************************************************************************')
 
 #Seleccionar por etiqueta de índice de fila
 
-primera_fila = cientificos.loc ['Carlos de la rosa']
+primera_fila = c.loc ['Carlos de la rosa']
 print (type(primera_fila))
 
 print (primera_fila)
