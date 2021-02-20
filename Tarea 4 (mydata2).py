@@ -4,17 +4,25 @@ from collections import OrderedDict
 
 # Creando nuestra data
 
+print()
+
 print ('*********************************************************************************') 
+
+print()
 
 c = pd.Series (['Joe lopez', 'DevOp'], index = ['Persona', 'Who']) # Declaramos la variable que contendra las series
 
 print (c) 
 
+print()
+
 print ('*********************************************************************************')
 
-# Creando un DataFrame
+print()
 
-cientificos = pd.DataFrame( 
+# Creando nuestro DataFrame 
+
+c = pd.DataFrame( 
     data = {'Ocupacion': ['Ing. Quimico' , 'Astronomo', 'Bioquimico' , 'Biofisico'] ,
      'Nacimiento': ['1971-08-23' , '1983-03-13' , '1975-04-11' , '1988-04-27'] ,
      'Muerte': ['2014-02-23' , '2019-05-24' , '2010-08-29' , '2017-10-17'] ,
@@ -22,21 +30,74 @@ cientificos = pd.DataFrame(
        index =  ['Andrea Castro' , 'Carlos de la rosa' , 'Jose Matos' , 'Carla Martinez' ] ,
      columns = ['Ocupacion' , 'Nacimiento' , 'Muerte' , 'Edad'])
 
-print (cientificos) 
+print () 
 
 print ('*********************************************************************************')
 
 #Seleccionar por etiqueta de índice de fila
 
-primera_fila = cientificos.loc ['Carlos de la rosa']
+primera_fila = c.loc ['Andrea Castro']
 
 print (type(primera_fila))
 
+print('***********************************************')
+
+segunda_fila = c.loc ['Jose Matos']
+
+print (type(segunda_fila))
+
+print('***********************************************')
+
 print (primera_fila)
 
-print ('*********************************************************************************')     
+print()
 
-Ages = cientificos['Edad']
+print (segunda_fila)
+
+
+# Creando nuestra data
+
+print()
+
+print ('*********************************************************************************') 
+
+print()
+
+
+
+print ('*********************************************************************************')
+
+print()
+
+# Creando nuestro DataFrame 
+
+
+print ('*********************************************************************************')
+
+#Seleccionar por etiqueta de índice de fila
+
+primera_fila = c.loc ['Andrea Castro']
+
+print (type(primera_fila))
+
+print('***********************************************')
+
+segunda_fila = c.loc ['Jose Matos']
+
+print (type(segunda_fila))
+
+print('***********************************************')
+
+print (primera_fila)
+
+print()
+
+print (segunda_fila)
+
+print ('*********************************************************************************')     
+print ()
+
+Ages = c['Edad']
 
 print(Ages)
 
@@ -71,6 +132,8 @@ print(Ages * Ages)
 
 print ('*********************************************************************************') 
 
+print()
+
 # Vector con enteros (escalares)
 
 print(Ages + 100)
@@ -102,7 +165,7 @@ print (Ages + rev_Ages)
 # Los vectores booleanos formarán subconjuntos de filas
 
 
-print(cientificos[cientificos['Edad'] > cientificos['Edad'].mean()])
+print(c[c['Edad'] > c['Edad'].mean()])
 
 print ('*********************************************************************************') 
 
@@ -110,12 +173,12 @@ print ('************************************************************************
 # 4 valores pasados como vector bool
 # 3 filas devueltas 
 
-print (cientificos.loc[[True, True, False, True]])
+print (c.loc[[True, True, False, True]])
 
 print ()
 
-First_half = cientificos [:4]
-second_half = cientificos [4:]
+First_half = c [:4]
+second_half = c [4:]
 
 print (First_half)
 
@@ -123,53 +186,65 @@ print (second_half)
 
 # Multiplica por una escalar
 
-print(cientificos * 2)
+print(c * 2)
 
 print ('*********************************************************************************') 
 
 # Agregar columnas adicionales
 
-print(cientificos['Nacimiento']. dtype)
+print(c['Nacimiento']. dtype)
 
-print(cientificos['Muerte']. dtype)
+print(c['Muerte']. dtype)
 
 # Dar formato a la columna 'Nacido' como fecha y hora
+print ('*********************************************************************************') 
 
-Nacimiento_datetime = pd.to_datetime(cientificos['Nacimiento'], format= '%Y-%m-%d')
+Nacimiento_datetime = pd.to_datetime(c['Nacimiento'], format= '%Y-%m-%d')
 
 print(Nacimiento_datetime)
 
 print()
 
-Muerte_datetime = pd.to_datetime(cientificos['Muerte'], format= '%Y-%m-%d')
+Muerte_datetime = pd.to_datetime(c['Muerte'], format= '%Y-%m-%d')
 
-cientificos['Nacimiento_dt'], cientificos['Muerte_dt'] = (Nacimiento_datetime, Muerte_datetime)
+c['Nacimiento_dt'], c['Muerte_dt'] = (Nacimiento_datetime, Muerte_datetime)
 
-print(cientificos.head())
+print ()
 
-print(cientificos.shape)
+print('**********************************************************************************')
+
+print(c.head())
+
+print(c.shape)
 
 print ('*********************************************************************************') 
 
 # Cambiar directamente una columna
 
-print(cientificos['Edad'])
+print(c['Edad'])
 print()
 
-cientificos['Edad_days_dt'] = (cientificos['Muerte_dt'] - cientificos['Nacimiento_dt'])
+print ('*********************************************************************************') 
 
+
+c['Edad_days_dt'] = (c['Muerte_dt'] - c['Nacimiento_dt'])
+
+print()
 
 print ('*********************************************************************************') 
 
 # Todas las columnas actuales en nuestros datos
 
-print (cientificos .columns)
+print (c.columns)
 
 # Columnas después de quitar la columna de edad
 
+print ('*********************************************************************************') 
+
 print()
-cientificos_dropped = cientificos.drop(['Edad'], axis=1)
+
+c_dropped = c.drop(['Edad'], axis=1)
 
 # columnas después de dejar caer nuestra columna
 
-print(cientificos_dropped.columns)
+print(c_dropped.columns)
