@@ -17,17 +17,15 @@ plt.plot(dataset_1['x'], dataset_1['y'])
 plt.plot(dataset_1['x'], dataset_1['y'], 'o')
 
 
+# Creando subconjuntos de datos de anscombe
 
-# Crear subconjuntos de datos de anscombe
 dataset_2 = anscombe[anscombe['dataset'] == 'II']
 dataset_3 = anscombe[anscombe['dataset'] == 'III']
 dataset_4 = anscombe[anscombe['dataset'] == 'IV']
 
-# Crea la figura completa donde irán nuestras subtramas
+# Creando la figura completa donde irán nuestras subtramas
 fig = plt.figure()
 
-# Dígale a la figura cómo deben distribuirse las subtramas
-# En el ejemplo tendremos
 # 2 hileras del plot y cada fila tendrá 2 plot
 
 # El subplot tiene 2 filas y 2 columnas, ubicación del plot 1
@@ -44,6 +42,7 @@ axes4 = fig.add_subplot(2, 2, 4)
 
 
 # Agregando un gráfico a cada uno de los ejes creados anteriormente
+
 axes1.plot(dataset_1['x'], dataset_1['y'], 'o')
 axes2.plot(dataset_2['x'], dataset_2['y'], 'o')
 axes3.plot(dataset_3['x'], dataset_3['y'], 'o')
@@ -55,11 +54,11 @@ axes2.set_title("dataset_2")
 axes3.set_title("dataset_3")
 axes4.set_title("dataset_4")
 
-# Agrega un título para la figura completa
+# Agregando un título para la figura completa
 fig.suptitle("Anscombe Data")
 
-# Utilice un diseño ajustado
+# Diseño ajustado
 fig.tight_layout()
 
-
+# Mostrar el plot
 plt.show()
