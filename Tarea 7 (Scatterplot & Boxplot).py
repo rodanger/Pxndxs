@@ -39,6 +39,7 @@ axes1.set_xlabel('Sex')
 axes1.set_ylabel('Tip')
 axes1.set_title('Boxplot of Tips by Sex')
 
+# Mostramos el grafico
 boxplot.show()
 plt.show()
 
@@ -71,7 +72,7 @@ axes1.set_title('Total Bill vs Tip Colored by Sex and Sized by Size ') # Titulo 
 axes1.set_xlabel('Total Bill') # La etiqueta x sera 'Total Bill'
 axes1.set_ylabel('Tip') # La etiqueta y sera 'Tip'
 
-# Desplegamos el grafico
+# Mostramos el grafico
 scatter_plot.show()
 plt.show()
 
