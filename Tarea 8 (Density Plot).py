@@ -31,7 +31,7 @@ plt.show() # Mostrar grafico
 
 den, ax = plt.subplots() 
 ax = sns.distplot(tips['total_bill'], hist=False) # Parametro kde = falso
-ax.set_title('Total Bill Density') # Titulo de historigrama
+ax.set_title('Total Bill Density') # Titulo de histograma
 ax.set_xlabel('Total Bill') # x sera Total Bill
 ax.set_ylabel('Unit Probability') # y sera Unit Probability
 
@@ -42,7 +42,7 @@ plt.show() # Mostrar grafico
 
 hist_den_rug, ax = plt.subplots() 
 ax = sns.distplot(tips['total_bill'], rug=True) # parametro alfombra = True
-ax.set_title('Total Bill Density and Rug Plot') # titulo del historigrama
+ax.set_title('Total Bill Density and Rug Plot') # titulo del histograma
 ax.set_xlabel('Total Bill') # x sera Total Bill
 
 plt.show() # Mostrar grafico
