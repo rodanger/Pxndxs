@@ -51,7 +51,7 @@ print ('************************************************************************
 
 print()
 
-#nueva fila a un marco de datos
+# Nueva fila a un marco de datos
 
 print(pd.concat([df1 , new_row_series]))
 
