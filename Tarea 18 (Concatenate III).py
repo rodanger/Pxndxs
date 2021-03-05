@@ -21,7 +21,7 @@ print()
 
 print ('*********************************************************************************')
 
-# The columns align themselves and NaN fills in any missing areas
+# Las columnas se alinean y NaN rellena las áreas faltantes
 
 row_concat = pd.concat([df1, df2, df3])
 print(row_concat)
@@ -31,11 +31,12 @@ print(pd.concat([df1, df2, df3], join='inner'))
 
 print(pd.concat)
 
-# Only the columns that all of them share will be returned
+
+# Solo se devolverán las columnas que todos comparten
 
 print(pd.concat([df1, df3], ignore_index=False, join='inner'))
 
-### Concatenate columns with Different Rows
+### Concatenar columnas con diferentes filas
 
 df1.index = [0, 1, 2, 3]
 df2.index = [4, 5, 6, 7]
