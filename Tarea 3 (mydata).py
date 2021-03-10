@@ -10,6 +10,7 @@ c = pd.Series (['Joe lopez', 'DevOp'], index = ['Persona', 'Who']) # Declaramos 
 print (c) 
 
 print ('*********************************************************************************')
+
 # Creando un DataFrame
 
 d = pd.DataFrame ({'Nombre': ['Andrea Castro' , 'Carlos de la rosa' ] ,
@@ -22,9 +23,6 @@ print ('************************************************************************
 
 # Creando nuestro ejemplo de DataFrame 
 # Con una columna indexando etiqueta 
-
-
-print ('*********************************************************************************')
 
 
 c = pd.DataFrame( 
