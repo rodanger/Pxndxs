@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 
 import seaborn as sns 
 
-anscombe = sns. load_dataset("anscombe")
+anscombe = sns.load_dataset("anscombe")
 
 print(anscombe)
 
